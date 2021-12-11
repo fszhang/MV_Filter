@@ -11,6 +11,12 @@ void AddData()
     uint32_t dataNoise;
     uint32_t dataInt = dataNoise + dataBase;
     DataAVG(dataIndex, &AVG_Times, dataArray, &dataInt, &dataLast);
+    if (dataIndex < (AVG_DataTabCount - 1))
+    {
+        dataIndex++;
+    }
+    else
+        dataIndex = 0;
 }
 
 void DataAVG(byte dataIndex, byte *AVG_Times, uint32_t dataTab[], uint32_t *dataIn, uint32_t *dataLast)
