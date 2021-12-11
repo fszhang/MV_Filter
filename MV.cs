@@ -12,6 +12,10 @@ public void AddData()
     UInt32 dataBase = 10000;
     UInt32 dataInt = (UInt32)dataNoise.Next(1000) + dataBase;
     DataAVG(dataIndex, ref AVG_Times, ref dataArray, ref dataInt, ref dataLast);
+    if (dataIndex < (AVG_DataTabCount - 1)) 
+        dataIndex++;
+    else
+        dataIndex = 0;
 }
 
 
